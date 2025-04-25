@@ -691,3 +691,46 @@ footer {
 .contact-form .cta-button {
     align-self: center;
 }
+/* Contact Form Message Styles */
+.form-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Ensure existing contact form styles are included */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-blue);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-red);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}

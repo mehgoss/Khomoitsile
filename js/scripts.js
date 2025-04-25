@@ -1,70 +1,43 @@
-        // Mobile Menu Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+// Ensure DOM is fully loaded before running scripts
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    if (!mobileToggle || !navMenu) {
+        console.error('Mobile menu elements not found. Check .mobile-toggle and .nav-menu in the HTML.');
+        return;
+    }
 
-        // Testimonial Slider
-        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    // Toggle menu on click or touch
+    const toggleMenu = () => {
+        navMenu.classList.toggle('active');
+    };
 
-        testimonialDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const slideIndex = dot.getAttribute('data-slide');
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileToggle.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent default touch behavior
+        toggleMenu();
+    });
 
-                // Remove active class from all slides and dots
-                testimonialSlides.forEach(slide => {
-                    slide.classList.remove('active');
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
-
-                testimonialDots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-
-                // Add active class to selected slide and dot
-                testimonialSlides[slideIndex].classList.add('active');
-                dot.classList.add('active');
-            });
+                
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+            }
         });
-
-        // Auto slide testimonials
-        let currentSlide = 0;
-        const testimonialInterval = setInterval(() => {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-
-            // Remove active class from all slides and dots
-            testimonialSlides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-
-            testimonialDots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-
-            // Add active class to current slide and dot
-            testimonialSlides[currentSlide].classList.add('active');
-            testimonialDots[currentSlide].classList.add('active');
-        }, 5000);
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    navMenu.classList.remove('active');
-                }
-            });
-        });
+    });
+});

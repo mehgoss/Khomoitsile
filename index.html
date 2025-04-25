@@ -3,678 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khumoitsile Consulting - Digital Marketing, Sales & Promotions</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f8f8;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        /* Color Variables */
-        :root {
-            --primary-blue: #1a365d;
-            --primary-red: #d71e28;
-            --secondary-blue: #4682b4;
-            --light-bg: #ffffff;
-            --dark-text: #333333;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 60px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
-        
-        .nav-menu {
-            display: flex;
-        }
-        
-        .nav-menu li {
-            margin-left: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-menu a {
-            color: var(--primary-blue);
-            font-weight: 600;
-            padding: 0.5rem 0;
-            transition: color 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            color: var(--primary-red);
-        }
-        
-        .nav-menu a.active {
-            color: var(--primary-red);
-        }
-        
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--primary-red);
-        }
-        
-        .mobile-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a80 100%);
-            color: #fff;
-            padding: 8rem 5% 5rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/api/placeholder/800/400') no-repeat center center;
-            background-size: cover;
-            opacity: 0.15;
-            z-index: 1;
-        }
-        
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-red);
-            color: #fff;
-            padding: 0.8rem 2rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: #b51822;
-        }
-        
-        .hero-image {
-            flex: 1;
-            text-align: right;
-            margin-left: 2rem;
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Red Diagonal */
-        .red-diagonal {
-            height: 100px;
-            background-color: var(--primary-red);
-            transform: skewY(-3deg);
-            margin-top: -50px;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 5rem 5%;
-            background-color: #fff;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-red);
-        }
-        
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .service-card {
-            flex: 1;
-            min-width: 300px;
-            max-width: 400px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-header {
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .service-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .service-list {
-            margin-top: 1rem;
-        }
-        
-        .service-list li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .service-list li::before {
-            content: '•';
-            color: var(--primary-red);
-            font-size: 1.5rem;
-            margin-right: 10px;
-            margin-top: -5px;
-        }
-        
-        .service-footer {
-            padding: 1rem 1.5rem;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 5rem 5%;
-            background-color: #f8f8f8;
-        }
-        
-        .about-container {
-            display: flex;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            gap: 4rem;
-        }
-        
-        .about-image {
-            flex: 1;
-        }
-        
-        .about-image img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-content {
-            flex: 1;
-        }
-        
-        .about-content h2 {
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .about-content h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-red);
-        }
-        
-        .about-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 5rem 5%;
-            background-color: #fff;
-        }
-        
-        .testimonials-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial-slide {
-            padding: 2rem;
-            text-align: center;
-            display: none;
-        }
-        
-        .testimonial-slide.active {
-            display: block;
-            animation: fadeIn 1s;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .testimonial-content {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .testimonial-content::before,
-        .testimonial-content::after {
-            content: '"';
-            font-size: 3rem;
-            color: #ddd;
-            position: absolute;
-        }
-        
-        .testimonial-content::before {
-            top: -20px;
-            left: -20px;
-        }
-        
-        .testimonial-content::after {
-            bottom: -40px;
-            right: -20px;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-blue);
-        }
-        
-        .testimonial-company {
-            font-size: 0.9rem;
-            color: #777;
-        }
-        
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .testimonial-dot.active {
-            background-color: var(--primary-red);
-        }
-        
-        /* Call to Action Section */
-        .cta-section {
-            padding: 5rem 5%;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2a4a80 100%);
-            color: #fff;
-            text-align: center;
-        }
-        
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        /* Contact Info Section */
-        .contact-info {
-            padding: 5rem 5%;
-            background-color: #f8f8f8;
-        }
-        
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .contact-item {
-            flex: 1;
-            min-width: 250px;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            color: var(--primary-red);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-item h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-blue);
-        }
-        
-        .contact-item p {
-            font-size: 1.1rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 3rem 5% 1rem;
-        }
-        
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .footer-col {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .footer-col h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-red);
-        }
-        
-        .footer-col p {
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s;
-        }
-        
-        .social-icon:hover {
-            background-color: var(--primary-red);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-content {
-                margin-bottom: 2rem;
-            }
-            
-            .hero-image {
-                margin-left: 0;
-            }
-            
-            .about-container {
-                flex-direction: column;
-            }
-            
-            .about-content h2::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .about-content {
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 1rem;
-            }
-            
-            .logo img {
-                height: 50px;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                background-color: #fff;
-                flex-direction: column;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                transition: left 0.3s;
-                padding: 1rem 0;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-menu li {
-                margin: 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .nav-menu a {
-                display: block;
-                padding: 1rem;
-            }
-            
-            .hero {
-                padding-top: 6rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .about-content h2, 
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    <title>Khumoitsile Consulting - Social Media Management</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="img/logo2.jpg" alt="Khumoitsile Consulting Logo">
+                <img src="img/logo.jpg" alt="Khumoitsile Consulting Logo">
                 <div class="logo-text">KHUMOITSILE CONSULTING</div>
             </div>
             <div class="mobile-toggle">☰</div>
             <ul class="nav-menu">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="poster-design.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -684,12 +30,12 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Optimize Your Sales & Boost Your Digital Presence</h1>
-                <p>Khumoitsile Consulting specializes in sales, promotion, and digital marketing, helping businesses optimize sales and boost revenue. We aim to be a trusted and reputable firm that delivers results.</p>
-                <a href="#" class="cta-button">Get Started Today</a>
+                <h1>Elevate Your Social Media Presence</h1>
+                <p>Khumoitsile Consulting specializes in social media management, helping businesses build brand awareness, engage audiences, and achieve marketing goals.</p>
+                <a href="poster-design.html" class="cta-button">Explore Our Services</a>
             </div>
             <div class="hero-image">
-                <img src="img/pen.jpg" alt="Business Growth Chart">
+                <img src="img/markerting.jpg" alt="Social Media Strategy">
             </div>
         </div>
     </section>
@@ -700,62 +46,70 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-title">
-            <h2>Our Services</h2>
+            <h2>Our Social Media Management Services</h2>
         </div>
         <div class="services-container">
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Digital Marketing</h3>
-                    <p>Boost your online presence</p>
+                    <h3>Strategy & Content</h3>
+                    <p>Build a winning social media presence</p>
                 </div>
                 <div class="service-content">
                     <ul class="service-list">
-                        <li>Poster Design</li>
-                        <li>Social Media Content Creation</li>
-                        <li>Email Marketing Services</li>
-                        <li>Social Media Handling</li>
+                        <li>Social Media Strategy Development: Customized plans to meet your goals.</li>
+                        <li>Content Creation: Engaging text, images, and videos.</li>
+                        <li>Account Setup and Optimization: Consistent, professional profiles.</li>
+                        <li>Content Publishing and Scheduling: Timely posts across platforms.</li>
                     </ul>
                 </div>
                 <div class="service-footer">
-                    <a href="#" class="cta-button">Learn More</a>
+                    <a href="poster-design.html" class="cta-button">Learn More</a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Sales & Promotions</h3>
-                    <p>Increase your revenue</p>
+                    <h3>Advertising & Engagement</h3>
+                    <p>Reach and connect with your audience</p>
                 </div>
                 <div class="service-content">
                     <ul class="service-list">
-                        <li>Flyer Distribution</li>
-                        <li>Lead Generation Campaigns</li>
-                        <li>Referral Drive Program</li>
-                        <li>New Product Launching</li>
+                        <li>Social Media Advertising: Targeted paid campaigns.</li>
+                        <li>Engagement and Community Management: Build loyalty through interaction.</li>
+                        <li>Influencer Collaboration: Expand reach with trusted voices.</li>
                     </ul>
                 </div>
                 <div class="service-footer">
-                    <a href="#" class="cta-button">Learn More</a>
+                    <a href="poster-design.html" class="cta-button">Learn More</a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Business Consulting</h3>
-                    <p>Strategic growth solutions</p>
+                    <h3>Analytics & Support</h3>
+                    <p>Measure and optimize performance</p>
                 </div>
                 <div class="service-content">
                     <ul class="service-list">
-                        <li>Business Strategy Development</li>
-                        <li>Market Research & Analysis</li>
-                        <li>Revenue Optimization</li>
-                        <li>Performance Tracking</li>
+                        <li>Analytics and Reporting: Track progress with detailed insights.</li>
+                        <li>Crisis Management: Protect your brand reputation.</li>
+                        <li>Social Media Training: Empower your team with best practices.</li>
                     </ul>
                 </div>
                 <div class="service-footer">
-                    <a href="#" class="cta-button">Learn More</a>
+                    <a href="poster-design.html" class="cta-button">Learn More</a>
                 </div>
             </div>
+        </div>
+        <div class="services-benefits">
+            <h3>Benefits of Working With Us</h3>
+            <ul class="service-list">
+                <li><strong>Expertise</strong>: In-depth knowledge of social media platforms and strategies.</li>
+                <li><strong>Time-Saving</strong>: Free up your resources by outsourcing management.</li>
+                <li><strong>Increased Reach</strong>: Expand your audience and drive engagement.</li>
+                <li><strong>Measurable Results</strong>: Track performance with regular reports.</li>
+                <li><strong>Flexibility</strong>: Scalable services tailored to your needs.</li>
+            </ul>
         </div>
     </section>
 
@@ -767,9 +121,9 @@
             </div>
             <div class="about-content">
                 <h2>About Khumoitsile Consulting</h2>
-                <p>Khumoitsile Consulting is a premier marketing and sales consulting firm dedicated to helping businesses achieve sustainable growth. Our team of experts brings years of experience in digital marketing, sales optimization, and business development.</p>
-                <p>We believe in creating customized strategies that align with your business goals and deliver measurable results. Our client-focused approach ensures that we understand your unique challenges and provide solutions that drive success.</p>
-                <a href="#" class="cta-button">Read More About Us</a>
+                <p>Based in Pretoria, Mabopane Lebanon, Khumoitsile Consulting is a leading social media management agency dedicated to helping businesses thrive online. Our team of experts creates customized strategies to boost your brand’s visibility and engagement.</p>
+                <p>We focus on delivering measurable results through innovative social media solutions, fostering strong audience connections, and driving business growth. Partner with us to elevate your digital presence.</p>
+                <a href="about.html" class="cta-button">Read More About Us</a>
             </div>
         </div>
     </section>
@@ -782,28 +136,25 @@
         <div class="testimonials-container">
             <div class="testimonial-slide active">
                 <div class="testimonial-content">
-                    Khumoitsile Consulting transformed our digital marketing strategy. Their team's expertise in social media management and email marketing significantly increased our customer engagement and conversion rates. Highly recommended!
+                    Khumoitsile Consulting transformed our social media strategy. Their engaging content and targeted ads significantly boosted our brand awareness and customer interaction. Highly recommended!
                 </div>
                 <div class="testimonial-author">Sarah Johnson</div>
                 <div class="testimonial-company">CEO, Bright Ideas Inc.</div>
             </div>
-            
             <div class="testimonial-slide">
                 <div class="testimonial-content">
-                    The lead generation campaign designed by Khumoitsile Consulting exceeded our expectations. We saw a 45% increase in qualified leads within the first month. Their team is professional, responsive, and results-driven.
+                    Their community management and analytics reporting helped us connect with our audience like never before. We saw a 50% increase in engagement within two months!
                 </div>
                 <div class="testimonial-author">Michael Thompson</div>
                 <div class="testimonial-company">Marketing Director, Tech Solutions</div>
             </div>
-            
             <div class="testimonial-slide">
                 <div class="testimonial-content">
-                    Working with Khumoitsile Consulting on our product launch was a game-changer. Their strategic approach and attention to detail ensured our new service received maximum exposure in the market. We'll definitely be working with them again.
+                    Working with Khumoitsile on our influencer campaigns was a game-changer. Their expertise ensured our brand reached the right audience, driving impressive results.
                 </div>
                 <div class="testimonial-author">Rebecca Williams</div>
                 <div class="testimonial-company">Founder, Innovative Services</div>
             </div>
-            
             <div class="testimonial-nav">
                 <div class="testimonial-dot active" data-slide="0"></div>
                 <div class="testimonial-dot" data-slide="1"></div>
@@ -815,9 +166,9 @@
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="cta-container">
-            <h2>Ready to Grow Your Business?</h2>
-            <p>Contact us today for a free consultation and discover how our services can help you achieve your business goals.</p>
-            <a href="#" class="cta-button">Schedule a Consultation</a>
+            <h2>Ready to Boost Your Social Media?</h2>
+            <p>Contact us today for a free consultation and discover how our services can elevate your brand.</p>
+            <a href="contact.html" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -832,17 +183,15 @@
                 <h3>Email Us</h3>
                 <p>khumoitsilec@gmail.com</p>
             </div>
-            
             <div class="contact-item">
                 <div class="contact-icon">📞</div>
                 <h3>Call Us</h3>
                 <p>076 494 4704</p>
             </div>
-            
             <div class="contact-item">
                 <div class="contact-icon">📍</div>
                 <h3>Visit Us</h3>
-                <p>Gaborone, Botswana</p>
+                <p>Pretoria, Mabopane Lebanon</p>
             </div>
         </div>
     </section>
@@ -852,7 +201,7 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h3>About Us</h3>
-                <p>Khumoitsile Consulting specializes in sales, promotion, and digital marketing, helping businesses optimize sales and boost revenue. We aim to be a trusted and reputable firm that delivers results.</p>
+                <p>Khumoitsile Consulting is a social media management agency based in Pretoria, Mabopane Lebanon. We help businesses build brand awareness, engage audiences, and achieve marketing goals through innovative social media strategies.</p>
                 <div class="social-icons">
                     <a href="#" class="social-icon">f</a>
                     <a href="#" class="social-icon">t</a>
@@ -860,30 +209,27 @@
                     <a href="#" class="social-icon">ig</a>
                 </div>
             </div>
-            
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="poster-design.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
                 <h3>Our Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">Social Media Management</a></li>
-                    <li><a href="#">Lead Generation</a></li>
-                    <li><a href="#">Email Marketing</a></li>
-                    <li><a href="#">Product Launching</a></li>
+                    <li><a href="poster-design.html">Social Media Strategy</a></li>
+                    <li><a href="poster-design.html">Content Creation</a></li>
+                    <li><a href="poster-design.html">Social Media Advertising</a></li>
+                    <li><a href="poster-design.html">Engagement Management</a></li>
+                    <li><a href="poster-design.html">Analytics & Reporting</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
                 <h3>Business Hours</h3>
                 <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
@@ -891,84 +237,11 @@
                 <p>Sunday: Closed</p>
             </div>
         </div>
-        
         <div class="copyright">
-            &copy; 2025 Khumoitsile Consulting. All Rights Reserved.
+            © 2025 Khumoitsile Consulting. All Rights Reserved.
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Testimonial Slider
-        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        
-        testimonialDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const slideIndex = dot.getAttribute('data-slide');
-                
-                // Remove active class from all slides and dots
-                testimonialSlides.forEach(slide => {
-                    slide.classList.remove('active');
-                });
-                
-                testimonialDots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-                
-                // Add active class to selected slide and dot
-                testimonialSlides[slideIndex].classList.add('active');
-                dot.classList.add('active');
-            });
-        });
-        
-        // Auto slide testimonials
-        let currentSlide = 0;
-        const testimonialInterval = setInterval(() => {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-            
-            // Remove active class from all slides and dots
-            testimonialSlides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-            
-            testimonialDots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Add active class to current slide and dot
-            testimonialSlides[currentSlide].classList.add('active');
-            testimonialDots[currentSlide].classList.add('active');
-        }, 5000);
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    navMenu.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

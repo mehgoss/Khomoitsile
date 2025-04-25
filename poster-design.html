@@ -3,98 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Poster Design Services by Khumoitsile Consulting">
-    <title>Poster Design - Khumoitsile Consulting</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Services - Khumoitsile Consulting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <img src="images/logo.png" alt="Khumoitsile Consulting Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">☰</div>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/api/placeholder/60/60" alt="Khumoitsile Consulting Logo">
+                <div class="logo-text">KHUMOITSILE CONSULTING</div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Poster Design Services</h1>
-            <p>Create eye-catching posters that captivate your audience.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Our Services</h1>
+                <p>Explore our comprehensive range of services designed to boost your business’s digital presence, optimize sales, and drive sustainable growth.</p>
+                <a href="#services" class="cta-button">Discover Our Solutions</a>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="Business Solutions">
+            </div>
         </div>
     </section>
 
-    <!-- Service Details -->
-    <section class="service-detail">
-        <div class="container">
-            <h2>Why Choose Our Poster Design?</h2>
-            <p>Our poster design service delivers visually stunning, brand-aligned materials for events, promotions, or awareness campaigns. We combine creativity with strategic messaging to ensure your posters stand out.</p>
-            <ul>
-                <li>Custom designs tailored to your brand identity.</li>
-                <li>High-resolution, print-ready files.</li>
-                <li>Fast turnaround to meet tight deadlines.</li>
-                <li>Multiple revisions to ensure satisfaction.</li>
-            </ul>
-            <h3>Our Process</h3>
-            <p>1. Consultation: We discuss your goals and brand guidelines.</p>
-            <p>2. Design: Our team creates initial concepts.</p>
-            <p>3. Feedback: You review and provide input.</p>
-            <p>4. Delivery: Receive final files ready for print or digital use.</p>
-            <a href="contact.html" class="cta-button">Request a Quote</a>
-        </div>
-    </section>
+    <!-- Red Diagonal Divider -->
+    <div class="red-diagonal"></div>
 
-    <!-- Related Services -->
-    <section class="related-services">
-        <div class="container">
-            <h2>Explore More Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Social Media Content</h3>
-                    <p>Engaging posts to boost your online presence.</p>
-                    <a href="services.html" class="learn-more">Learn More</a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>What We Offer</h2>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Digital Marketing</h3>
+                    <p>Boost your online presence</p>
                 </div>
-                <div class="service-card">
-                    <h3>Email Marketing</h3>
-                    <p>Personalized campaigns to drive conversions.</p>
-                    <a href="services.html" class="learn-more">Learn More</a>
+                <div class="service-content">
+                    <p>Our digital marketing services are tailored to increase your brand visibility and engage your target audience effectively.</p>
+                    <ul class="service-list">
+                        <li>Poster Design: Eye-catching visuals for promotions.</li>
+                        <li>Social Media Content Creation: Engaging posts to build your brand.</li>
+                        <li>Email Marketing Services: Targeted campaigns to nurture leads.</li>
+                        <li>Social Media Handling: Professional management of your platforms.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <a href="contact.html" class="cta-button">Get a Quote</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Sales & Promotions</h3>
+                    <p>Increase your revenue</p>
+                </div>
+                <div class="service-content">
+                    <p>We design strategies to drive sales and promote your products or services to the right audience.</p>
+                    <ul class="service-list">
+                        <li>Flyer Distribution: Reach local customers effectively.</li>
+                        <li>Lead Generation Campaigns: Attract high-quality prospects.</li>
+                        <li>Referral Drive Program: Encourage customer referrals.</li>
+                        <li>New Product Launching: Create buzz for your offerings.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <a href="contact.html" class="cta-button">Get a Quote</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Business Consulting</h3>
+                    <p>Strategic growth solutions</p>
+                </div>
+                <div class="service-content">
+                    <p>Our consulting services provide actionable insights to optimize your business operations and achieve your goals.</p>
+                    <ul class="service-list">
+                        <li>Business Strategy Development: Plan for long-term success.</li>
+                        <li>Market Research & Analysis: Understand your market.</li>
+                        <li>Revenue Optimization: Maximize your profits.</li>
+                        <li>Performance Tracking: Monitor and improve results.</li>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <a href="contact.html" class="cta-button">Get a Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Start Your Poster Campaign?</h2>
-            <p>Contact us to bring your vision to life.</p>
-            <a href="contact.html" class="cta-button">Get Started</a>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Elevate Your Business?</h2>
+            <p>Contact us today to discuss how our services can help you achieve your business objectives.</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <h3>Email Us</h3>
+                <p>khumoitsilec@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>076 494 4704</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>Gaborone, Botswana</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2025 Khumoitsile Consulting. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Khumoitsile Consulting specializes in sales, promotion, and digital marketing, helping businesses optimize sales and boost revenue. We aim to be a trusted and reputable firm that delivers results.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
             </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Social Media Management</a></li>
+                    <li><a href="#">Lead Generation</a></li>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Product Launching</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Khumoitsile Consulting. All Rights Reserved.
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -50,3 +50,24 @@ form.addEventListener('submit', (e) => {
     alert('Thank you for your message! We will get back to you soon.');
     form.reset();
 });
+// Portfolio Filters
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filter items
+        const filter = button.dataset.filter;
+        portfolioItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter referencing the css style) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});

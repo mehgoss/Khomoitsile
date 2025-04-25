@@ -420,3 +420,142 @@ footer {
     text-align: center;
     margin-bottom: 2rem;
 }
+/* Portfolio Filters */
+.portfolio-filters {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.filter-btn {
+    background: #6b7280;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #d71e28;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form h2, .contact-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.map-placeholder {
+    background: #e0e0e0;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.contact-details .social-links {
+    margin-top: 1rem;
+}
+
+.contact-details .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.contact-details .social-links a:hover {
+    color: #d71e28;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Service Detail Section */
+.service-detail {
+    padding: 4rem 0;
+}
+
+.service-detail h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-detail h3 {
+    font-size: 1.5rem;
+    color: #1a365d;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.service-detail ul {
+    list-style: disc;
+    margin: 1rem 0 2rem 2rem;
+}
+
+.service-detail .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Related Services */
+.related-services {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.related-services h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}

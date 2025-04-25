@@ -1,73 +1,28 @@
 // Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav ul');
+const mobileToggle = document.querySelector('.mobile-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
+mobileToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 
-// Testimonial Carousel
-const testimonials = document.querySelectorAll('.testimonial');
-const prevButton = document.querySelector('.carousel-nav .prev');
-const nextButton = document.querySelector('.carousel-nav .next');
-let currentIndex = 0;
-
-function showTestimonial(index) {
-    testimonials.forEach((t, i) => {
-        t.classList.toggle('active', i === index);
-    });
-}
-
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-});
-
-// Auto-rotate testimonials every 5 seconds
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-}, 5000);
-
-// Contact Form Submission
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        service: formData.get('service'),
-        message: formData.get('message'),
-    };
-    console.log('Form Submitted:', data);
-    alert('Thank you for your message! We will get back to you soon.');
-    form.reset();
-});
-// Portfolio Filters
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // Filter items
-        const filter = button.dataset.filter;
-        portfolioItems.forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter referencing the css style) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            navMenu.classList.remove('active');
+        }
     });
 });

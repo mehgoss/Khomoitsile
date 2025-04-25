@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services by Khumoitsile Consulting - Digital Marketing and Sales & Promotions">
+    <title>Services - Khumoitsile Consulting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Khumoitsile Consulting Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Explore our expert digital marketing and sales solutions tailored to your business needs.</p>
+        </div>
+    </section>
+
+    <!-- Digital Marketing Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Digital Marketing</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Poster Design</h3>
+                    <p>Eye-catching posters tailored to your brand for events or promotions.</p>
+                    <a href="#contact" class="learn-more">Request a Quote</a>
+                </div>
+                <div class="service-card">
+                    <h3>Social Media Content</h3>
+                    <p>Engaging posts, graphics, and videos to boost your online presence.</p>
+                    <a href="#contact" class="learn-more">See Our Packages</a>
+                </div>
+                <div class="service-card">
+                    <h3>Email Marketing</h3>
+                    <p>Personalized campaigns to nurture leads and drive conversions.</p>
+                    <a href="#contact" class="learn-more">Start Your Campaign</a>
+                </div>
+                <div class="service-card">
+                    <h3>Social Media Handling</h3>
+                    <p>Full-service management of your social media accounts.</p>
+                    <a href="#contact" class="learn-more">Get a Free Audit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales & Promotions Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Sales & Promotions</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Flyer Distribution</h3>
+                    <p>Targeted campaigns to reach local audiences effectively.</p>
+                    <a href="#contact" class="learn-more">Plan Your Campaign</a>
+                </div>
+                <div class="service-card">
+                    <h3>Lead Generation Campaigns</h3>
+                    <p>Data-driven strategies to attract high-quality leads.</p>
+                    <a href="#contact" class="learn-more">Boost Your Leads</a>
+                </div>
+                <div class="service-card">
+                    <h3>Referral Drive Program</h3>
+                    <p>Incentivize customers to refer new clients.</p>
+                    <a href="#contact" class="learn-more">Launch a Program</a>
+                </div>
+                <div class="service-card">
+                    <h3>New Product Launching</h3>
+                    <p>Comprehensive campaigns to introduce your product.</p>
+                    <a href="#contact" class="learn-more">Plan Your Launch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Grow Your Business?</h2>
+            <p>Contact us to discuss your marketing and sales needs.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Khumoitsile Consulting. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -3,100 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio - Khumoitsile Consulting's Successful Client Projects">
     <title>Portfolio - Khumoitsile Consulting</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <img src="images/logo.png" alt="Khumoitsile Consulting Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">☰</div>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/api/placeholder/60/60" alt="Khumoitsile Consulting Logo">
+                <div class="logo-text">KHUMOITSILE CONSULTING</div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Our Portfolio</h1>
-            <p>Explore our successful projects in digital marketing and sales promotions.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Our Portfolio</h1>
+                <p>Explore our successful projects and see how we’ve helped businesses achieve their goals through innovative marketing and sales strategies.</p>
+                <a href="#portfolio" class="cta-button">View Our Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="Portfolio Showcase">
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio Filters -->
-    <section class="portfolio-filters">
-        <div class="container">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
-            <button class="filter-btn" data-filter="sales-promotions">Sales & Promotions</button>
-        </div>
-    </section>
+    <!-- Red Diagonal Divider -->
+    <div class="red-diagonal"></div>
 
-    <!-- Portfolio Gallery -->
-    <section class="portfolio">
-        <div class="container">
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="digital-marketing">
-                    <img src="images/portfolio-placeholder.jpg" alt="Social Media Campaign">
+    <!-- Portfolio Section -->
+    <section class="services" id="portfolio">
+        <div class="section-title">
+            <h2>Our Projects</h2>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-header">
                     <h3>Social Media Campaign</h3>
-                    <p>Doubled engagement for a local retailer through targeted ads.</p>
-                    <a href="#contact" class="learn-more">View Case Study</a>
+                    <p>Bright Ideas Inc.</p>
                 </div>
-                <div class="portfolio-item" data-category="sales-promotions">
-                    <img src="images/portfolio-placeholder.jpg" alt="Flyer Distribution">
-                    <h3>Flyer Distribution</h3>
-                    <p>Increased foot traffic by 25% for a restaurant.</p>
-                    <a href="#contact" class="learn-more">View Case Study</a>
+                <div class="service-content">
+                    <img src="/api/placeholder/400/200" alt="Social Media Campaign" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <p>Designed and executed a social media campaign that increased Bright Ideas Inc.’s engagement by 60% and drove 25% more website traffic.</p>
                 </div>
-                <div class="portfolio-item" data-category="digital-marketing">
-                    <img src="images/portfolio-placeholder.jpg" alt="Email Marketing">
-                    <h3>Email Marketing</h3>
-                    <p>Boosted conversions by 30% for an e-commerce brand.</p>
-                    <a href="#contact" class="learn-more">View Case Study</a>
+                <div class="service-footer">
+                    <a href="#" class="cta-button">View Case Study</a>
                 </div>
-                <div class="portfolio-item" data-category="sales-promotions">
-                    <img src="images/portfolio-placeholder.jpg" alt="Product Launch">
+            </div>
+
+            <div class="service-card">
+                <div class="service-header">
                     <h3>Product Launch</h3>
-                    <p>Generated 500+ leads for a new product rollout.</p>
-                    <a href="#contact" class="learn-more">View Case Study</a>
+                    <p>Innovative Services</p>
+                </div>
+                <div class="service-content">
+                    <img src="/api/placeholder/400/200" alt="Product Launch" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <p>Led a successful product launch for Innovative Services, resulting in a 40% sales increase within the first quarter.</p>
+                </div>
+                <div class="service-footer">
+                    <a href="#" class="cta-button">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-header">
+                    <h3>Lead Generation</h3>
+                    <p>Tech Solutions</p>
+                </div>
+                <div class="service-content">
+                    <img src="/api/placeholder/400/200" alt="Lead Generation" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <p>Implemented a lead generation strategy for Tech Solutions, boosting qualified leads by 45% in one month.</p>
+                </div>
+                <div class="service-footer">
+                    <a href="#" class="cta-button">View Case Study</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Want Results Like These?</h2>
-            <p>Contact us to start your next project.</p>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Want to Be Our Next Success Story?</h2>
+            <p>Contact us today to discuss how we can help your business shine.</p>
             <a href="contact.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <h3>Email Us</h3>
+                <p>khumoitsilec@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>076 494 4704</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>Gaborone, Botswana</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2025 Khumoitsile Consulting. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Khumoitsile Consulting specializes in sales, promotion, and digital marketing, helping businesses optimize sales and boost revenue. We aim to be a trusted and reputable firm that delivers results.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
             </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Social Media Management</a></li>
+                    <li><a href="#">Lead Generation</a></li>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Product Launching</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Khumoitsile Consulting. All Rights Reserved.
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

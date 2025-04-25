@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Khumoitsile Consulting's Successful Client Projects">
+    <title>Portfolio - Khumoitsile Consulting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Khumoitsile Consulting Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Explore our successful projects in digital marketing and sales promotions.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+        <div class="container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
+            <button class="filter-btn" data-filter="sales-promotions">Sales & Promotions</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="digital-marketing">
+                    <img src="images/portfolio-placeholder.jpg" alt="Social Media Campaign">
+                    <h3>Social Media Campaign</h3>
+                    <p>Doubled engagement for a local retailer through targeted ads.</p>
+                    <a href="#contact" class="learn-more">View Case Study</a>
+                </div>
+                <div class="portfolio-item" data-category="sales-promotions">
+                    <img src="images/portfolio-placeholder.jpg" alt="Flyer Distribution">
+                    <h3>Flyer Distribution</h3>
+                    <p>Increased foot traffic by 25% for a restaurant.</p>
+                    <a href="#contact" class="learn-more">View Case Study</a>
+                </div>
+                <div class="portfolio-item" data-category="digital-marketing">
+                    <img src="images/portfolio-placeholder.jpg" alt="Email Marketing">
+                    <h3>Email Marketing</h3>
+                    <p>Boosted conversions by 30% for an e-commerce brand.</p>
+                    <a href="#contact" class="learn-more">View Case Study</a>
+                </div>
+                <div class="portfolio-item" data-category="sales-promotions">
+                    <img src="images/portfolio-placeholder.jpg" alt="Product Launch">
+                    <h3>Product Launch</h3>
+                    <p>Generated 500+ leads for a new product rollout.</p>
+                    <a href="#contact" class="learn-more">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Want Results Like These?</h2>
+            <p>Contact us to start your next project.</p>
+            <a href="contact.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Khumoitsile Consulting. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

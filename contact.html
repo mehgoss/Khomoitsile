@@ -3,89 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Khumoitsile Consulting - Get in Touch Today">
     <title>Contact Us - Khumoitsile Consulting</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <img src="images/logo.png" alt="Khumoitsile Consulting Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">☰</div>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/api/placeholder/60/60" alt="Khumoitsile Consulting Logo">
+                <div class="logo-text">KHUMOITSILE CONSULTING</div>
+            </div>
+            <div class="mobile-toggle">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>Ready to grow your business? Get in touch with our team today.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>We’re here to help your business grow. Reach out to us today to discuss your needs or schedule a consultation.</p>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="Contact Us">
+            </div>
         </div>
     </section>
 
-    <!-- Contact Form & Info -->
-    <section class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contact-form">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <select name="service" required>
-                            <option value="" disabled selected>Select Service</option>
-                            <option value="digital-marketing">Digital Marketing</option>
-                            <option value="sales-promotions">Sales & Promotions</option>
-                            <option value="custom">Custom Solutions</option>
-                        </select>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="cta-button">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-details">
-                    <h2>Contact Information</h2>
-                    <p><strong>Phone:</strong> 076 494 4704</p>
-                    <p><strong>Email:</strong> khumoitsilec@gmail.com</p>
-                    <p><strong>Hours:</strong> Mon–Fri, 9 AM–5 PM</p>
-                    <p><strong>Address:</strong> [Your Office Address, City, South Africa]</p>
-                    <div class="map-placeholder">
-                        <!-- Embed Google Maps here -->
-                        <p>[Google Maps Embed Placeholder]</p>
+    <!-- Red Diagonal Divider -->
+    <div class="red-diagonal"></div>
+
+    <!-- Contact Form Section -->
+    <section class="contact-info" id="contact">
+        <div class="section-title">
+            <h2>Send Us a Message</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item" style="flex: 2; min-width: 300px;">
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="social-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Twitter</a>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
             </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <h3>Email Us</h3>
+                <p>khumoitsilec@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>076 494 4704</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>Gaborone, Botswana</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Let’s work together to achieve your business goals. Contact us now for a free consultation.</p>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2025 Khumoitsile Consulting. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Khumoitsile Consulting specializes in sales, promotion, and digital marketing, helping businesses optimize sales and boost revenue. We aim to be a trusted and reputable firm that delivers results.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
             </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Social Media Management</a></li>
+                    <li><a href="#">Lead Generation</a></li>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Product Launching</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Khumoitsile Consulting. All Rights Reserved.
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
